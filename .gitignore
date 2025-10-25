@@ -1,0 +1,29 @@
+# โฟลเดอร์ Build ที่สร้างโดย idf.py
+/build/
+
+# ไฟล์ Configuration ที่สร้างขึ้นเฉพาะเครื่อง (Local)
+/sdkconfig
+
+# ไฟล์ Backup ของ Configuration
+/sdkconfig.old
+
+# ไฟล์ที่สร้างโดย Text Editors และ IDEs ทั่วไป
+*.swp
+*~
+*.bak
+*.orig
+.vscode/
+.idea/
+
+# ไฟล์ Dependency ที่จัดการโดย Component Manager (ถ้าใช้)
+/managed_components/
+
+# ไฟล์ Output อื่นๆ ที่อาจเกิดขึ้น
+*.bin
+*.elf
+*.map
+*.a
+*.o
+
+# ไฟล์ Log
+*.log
