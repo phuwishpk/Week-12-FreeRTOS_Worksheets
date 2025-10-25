@@ -1,4 +1,5 @@
-# โฟลเดอร์ Build ที่สร้างโดย idf.py
+# --- Build Output ---
+# โฟลเดอร์ Build หลัก (สำคัญที่สุด)
 /build/
 
 # ไฟล์ Configuration ที่สร้างขึ้นเฉพาะเครื่อง (Local)
@@ -7,6 +8,29 @@
 # ไฟล์ Backup ของ Configuration
 /sdkconfig.old
 
+# ไฟล์ Argument สำหรับการ Flash (มักอยู่ใน build/ แต่ใส่ไว้เผื่อ)
+flasher_args.json
+build/flasher_args.json
+build/flash_*
+
+# --- Component Manager ---
+# ไฟล์ Dependency ที่จัดการโดย Component Manager (ถ้าใช้)
+/managed_components/
+# dependencies.lock # ปกติควรเก็บไว้ใน Git เพื่อให้ build เหมือนเดิมได้ แต่ถ้าไม่ต้องการก็ uncomment
+
+# --- Common Build Artifacts ---
+# ไฟล์ Output อื่นๆ ที่อาจเกิดขึ้น (บางส่วนอยู่ใน build/ อยู่แล้ว)
+*.bin
+*.elf
+*.map
+*.a
+*.o
+*.d     # Compiler dependency files
+*.out   # Output files from some tools
+*.pt.csv # Generated partition table CSV (ถ้าสร้างขึ้นอัตโนมัติ)
+# partitions.csv # ถ้าไฟล์นี้ถูกสร้างขึ้นอัตโนมัติ ไม่ใช่ไฟล์ที่คุณแก้ไขเอง ก็ uncomment
+
+# --- IDE & Editor Files ---
 # ไฟล์ที่สร้างโดย Text Editors และ IDEs ทั่วไป
 *.swp
 *~
@@ -14,16 +38,27 @@
 *.orig
 .vscode/
 .idea/
+*.suo
+*.user
+*.DS_Store
 
-# ไฟล์ Dependency ที่จัดการโดย Component Manager (ถ้าใช้)
-/managed_components/
-
-# ไฟล์ Output อื่นๆ ที่อาจเกิดขึ้น
-*.bin
-*.elf
-*.map
-*.a
-*.o
-
-# ไฟล์ Log
+# --- Log Files ---
 *.log
+
+# --- Other Generated Files ---
+# CMake temporary files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# Python bytecode
+*.pyc
+__pycache__/
+
+# --- Optional: Debugging ---
+# GDB command files (ถ้าสร้างขึ้น)
+# gdbinit
+.gdbinit
+
+# Core dump files (ถ้าสร้างขึ้น)
+core.*
