@@ -447,7 +447,7 @@ void distribute_work_to_cores(void)
 
 ```bash
 # ESP-IDF project structure
-my_freertos_project/
+08-esp-idf-specific/README.md/
 ├── CMakeLists.txt              # Main CMake file
 ├── sdkconfig                   # Project configuration
 ├── main/
